@@ -1,0 +1,34 @@
+# prompt.txt — what was done this session (builder run, 2026-11-26 ~16:31–17:00 WIB)
+
+Task: build the make.fun entry for "One Line, One Laugh"
+(u-deysumbrella-one-line-one-laugh-e0cdcda9), $2, 1st place only, deadline
+2026-11-26 23:10 WIB, blind rounds R1 17:33 / R2 20:21 / final 23:10 WIB.
+Char limit 140. Program/v1, judge pairwise z-ai/glm-5.3-flash.
+
+Done:
+- Read the common builder brief, makefun_bounty_submission + makefun-judge-reading
+  skills, and kit/competition.yaml + RULES.txt in full. No recorder (judge-pilot
+  comps refuse `record` with HTTP 400 by design); built directly in-session.
+- Downloaded kit fresh: kit.tar.gz sha256
+  935ef45b4ef46f495eaad56db93221a13b8d9b6d2e97cadb26aed69ca8951dd0.
+- Live field checked via API: 950 submissions at ~16:40 WIB (brief's 605 stale).
+  The API submissions list is polluted with another comp's "Deadpan Forecasts"
+  entries; scored the visible joke-shaped ones as controls anyway.
+- Generated 45 candidates, scored each 0-5 on all 5 judge criteria in order
+  (total /25, ties by earliest criterion), in batches, saved in candidates.md.
+  Hand-counted char lengths were wrong; all counts recomputed with Python.
+- Winner: #29 "My fridge light went out and now I eat in the dark like a
+  raccoon with a mortgage." — 82 chars / 82 bytes, sha256
+  abc47ddeb71e7616bc9dde034dd13a96984fec6471feeaf00a39442c0d3b76f1, 23/25
+  (C1 5). Runner-up #21 also 23/25 but C1 4; best live control 21/25.
+- main.py: Python 3 stdlib only, no network, no randomness, deterministic;
+  guards raise ValueError on dialogue tag, judge-addressed, quoted,
+  third-person, link, over-limit, two-line, markdown lines. 10/10 negative
+  tests pass; two runs byte-identical.
+- README.md (methodology at top: formula, blind test, costs, verdicts; 3 live
+  badges), LICENSE (MIT), .makefun/owner.json (payout wallet
+  6aZ9Va3wP6aqy1AUHLAhfSJksFRnKYRD3CtnzwDwdxbw).
+- Repo: daring-falcon-58/u-deysumbrella-one-line-one-laugh-e0cdcda9 — see
+  SUBMIT-READY.md for creation status (GitHub API via egress proxy was
+  hanging on CONNECT at build time; creation/push retried there).
+- Did NOT submit, bundle, or run record --finish. Parent bundles + submits.
